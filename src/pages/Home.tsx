@@ -32,7 +32,7 @@ const TextColumn = styled('div')({
 });
 
 const CustomButton: React.FC<{ startIcon: React.ReactNode; label: string; link: string }> = ({ startIcon, label, link }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" className="custom-button-link" style={{ marginRight: '10px', width:'100%' }}>
+  <a href={link} target="_blank" rel="noopener noreferrer" className="custom-button-link" style={{  width:'100%', margin:'5px'}}>
     <Button
       variant="contained"
       sx={{
@@ -40,13 +40,13 @@ const CustomButton: React.FC<{ startIcon: React.ReactNode; label: string; link: 
         color: 'white',
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        paddingLeft: '0.5em',
+        paddingLeft: '1.5em',
         mb: { xs: 1, sm: 0 },
         borderRadius: '10px', // Add rounded corners
       }}
       startIcon={startIcon}
     >
-      <span style={{ marginLeft: '0.5em', marginRight: '0.5em' }}>{label}</span>
+      <span >{label}</span>
     </Button>
   </a>
 );
@@ -68,14 +68,13 @@ const Home: React.FC = () => {
       <Grid container spacing={2} alignItems="center" justifyContent="center">
         <Grid item xs={12} sm={6}>
           <TextColumn>
-            <Typography variant="h3" sx={{ color: 'red', fontWeight: 'bold' }}>
-              Plan Your Next Ride With
-              <span style={{ fontStyle: 'italic', color: 'black' }}>Spark Ride</span> 
+            <Typography variant="h2" sx={{ color: 'red', fontWeight: 'bold' }}>
+              Plan Your Next Ride  With
+              <span style={{ fontStyle: 'italic', color: 'black' }}> Spark Ride</span> 
             </Typography>
-            <Typography>
-              Plan your next ride with Spark Ride
-            </Typography>
-            <Typography>
+            <br/>
+            <br/>
+            <Typography sx={{ fontSize:'20px'}} align='center'>
               Download our client App on
             </Typography>
             <ButtonGroup
