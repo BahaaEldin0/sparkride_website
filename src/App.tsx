@@ -19,6 +19,7 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/social" element={<SocialResponsibility />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/support" element={<ContactUs />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<TermsOfService />} />
         </Routes>

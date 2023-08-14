@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, CssBaseline, ThemeProvider, Container, Menu, MenuItem } from '@mui/material';
 import { createTheme, styled } from '@mui/material/styles';
 import logoImage from '../assets/images/Black-English-Logo.png'; // Import your logo image
+import { Link } from 'react-router-dom'; // Import Link
 
 // Define the theme
 const theme = createTheme();
@@ -9,7 +10,7 @@ const theme = createTheme();
 // Create a styled AppBar
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
-  background: 'transparent',
+  background: '#fff',
   boxShadow: 'none',
 }));
 
@@ -18,7 +19,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
     padding: theme.spacing(1, 0), // Add vertical padding for spacing
     [theme.breakpoints.up('sm')]: {
-        marginLeft: '100px', // Add Left Margin only on screens larger than small
+        marginLeft: '-20px', // Add Left Margin only on screens larger than small
         marginRight: '140px', // Add Right Margin only on screens larger than small
     },
   }));
@@ -61,8 +62,10 @@ const Header: React.FC = () => {
         <StyledAppBar position="sticky">
             <Container>
             <StyledToolbar>
+            <Link to="/">
                 <LogoImage src={logoImage} alt="Logo" />
-                <Typography variant="h6" component="div" color="#000">
+            </Link>
+            <Typography variant="h6" component="div" color="#000">
                 <LanguageText onClick={handleLanguageClick}>
                     {currentLanguage === 'english' ? 'English' : 'Arabic'}
                 </LanguageText>
