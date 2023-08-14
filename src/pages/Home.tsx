@@ -10,6 +10,7 @@ import HuaweiIcon from '../assets/images/HuaweiIcon.jsx';
 
 
 import redPhones3 from '../assets/images/3 red phones.png';
+import redPhones2 from '../assets/images/2 red phones.png';
 import allCars from '../assets/images/all vehicles.png'
 import allCarTypes from '../assets/images/vehicle types.png'
 import sos from '../assets/images/sos.webp'
@@ -21,7 +22,19 @@ import preOrder from '../assets/images/planning.webp'
 import multistops from '../assets/images/multiStops.png'
 import recalulate from '../assets/images/recalculate.webp'
 import connectWithCaptains from '../assets/images/connect with captains.png'
+import sostrip from '../assets/images/sos-trip.png'
+import payment from '../assets/images/payment.png'
+import favourite2 from '../assets/images/favourite.png'
+import copoun2 from '../assets/images/copoun2.png'
+import copoun1 from '../assets/images/copoun1.png'
+
+
 const theme = createTheme({
+  palette:{
+    primary: {
+      main: '#e50a0a', // Yellow color
+    },
+  },
   typography: {
     fontFamily: '"Poppins", "Roboto", sans-serif',    
   }
@@ -49,6 +62,7 @@ const TextColumn = styled('div')({
 });
 
 const CustomButton: React.FC<{ startIcon: React.ReactNode; label: string; link: string }> = ({ startIcon, label, link }) => (
+  <ThemeProvider theme={theme}>
   <a href={link} target="_blank" rel="noopener noreferrer" className="custom-button-link" style={{  width:'100%', margin:'5px'}}>
     <Button
       variant="contained"
@@ -67,6 +81,7 @@ const CustomButton: React.FC<{ startIcon: React.ReactNode; label: string; link: 
       <span style={{fontFamily: 'roboto'}}>{label}</span>
     </Button>
   </a>
+  </ThemeProvider>
 );
 
 
@@ -215,7 +230,9 @@ const Home: React.FC = () => {
       <Grid container spacing={2} alignItems="center" justifyContent="center" sx={{mt:15}}>
         <Grid item xs={12} sm={6}>
           <ImageColumn>
-            <img src={sos} alt="Image 1" style={{ maxWidth: '100%' }} />
+            {/* <img src={sos} alt="Image 1" style={{ maxWidth: '100%' }} /> */}
+            <img src={sostrip} alt="Image 1" style={{ maxWidth: '65%' }} />
+
           </ImageColumn>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -269,7 +286,9 @@ const Home: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <ImageColumn>
-            <img src={pay} alt="Image 1" style={{ maxWidth: '100%' }} />
+            {/* <img src={pay} alt="Image 1" style={{ maxWidth: '100%' }} /> */}
+            <img src={payment} alt="Image 1" style={{ maxWidth: '65%' }} />
+
           </ImageColumn>
         </Grid>
       </Grid>
@@ -280,7 +299,9 @@ const Home: React.FC = () => {
       <Grid container spacing={2} alignItems="center" justifyContent="center" sx={{mt:10}}>
         <Grid item xs={12} sm={6}>
           <ImageColumn>
-            <img src={favourite} alt="Image 1" style={{ maxWidth: '100%' }} />
+            {/* <img src={favourite} alt="Image 1" style={{ maxWidth: '100%' }} /> */}
+            <img src={favourite2} alt="Image 1" style={{ maxWidth: '65%' }} />
+
           </ImageColumn>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -333,7 +354,9 @@ const Home: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <ImageColumn>
-            <img src={coupon} alt="Image 1" style={{ maxWidth: '100%' }} />
+            {/* <img src={coupon} alt="Image 1" style={{ maxWidth: '100%' }} /> */}
+            <img src={copoun2} alt="Image 1" style={{ maxWidth: '65%' }} />
+
           </ImageColumn>
         </Grid>
       </Grid>
@@ -429,7 +452,7 @@ const Home: React.FC = () => {
 
 
 
-    <StyledSection>
+    {/* <StyledSection>
       <Grid container spacing={2} alignItems="center" justifyContent="center" sx={{mt:10}}>
         
         <Grid item xs={12} sm={6}>
@@ -458,15 +481,15 @@ const Home: React.FC = () => {
           </ImageColumn>
         </Grid>
       </Grid>
-    </StyledSection>
+    </StyledSection> */}
 
 
     <StyledSection>
-      <Grid container spacing={2} alignItems="center" justifyContent="center" sx={{mb:30}}>
+      <Grid container spacing={2} alignItems="center" justifyContent="center" sx={{mb:30, mt:30}}>
         <Grid item xs={12} sm={6}>
           <TextColumn>
           <ImageColumn>
-            <img src={redPhones3} alt="Image 1" style={{ maxWidth: '100%' }} />
+            <img src={redPhones2} alt="Image 1" style={{ maxWidth: '100%' }} />
           </ImageColumn>
             <br/>
             <br/>
