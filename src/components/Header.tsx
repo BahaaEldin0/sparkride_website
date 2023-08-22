@@ -65,11 +65,11 @@ const Header: React.FC = () => {
             <Link to="/">
                 <LogoImage src={logoImage} alt="Logo" />
             </Link>
-            <Typography variant="h6" component="div" color="#000">
+            {/* <Typography variant="h6" component="div" color="#000">
                 <LanguageText onClick={handleLanguageClick}>
                     {currentLanguage === 'english' ? 'English' : 'Arabic'}
                 </LanguageText>
-                </Typography>
+                </Typography> */}
             </StyledToolbar>
             </Container>
         </StyledAppBar>
